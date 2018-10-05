@@ -13,6 +13,9 @@ raw_page %>%
 #  fs::file_move(.,fs::path("./upper/", fs::path_file(.)))
 all_downloads <- fs::dir_ls("./upper")
 
+# helpful SO post
+# https://stackoverflow.com/questions/3444645/merge-pdf-files
+
 reticulate::use_python("/usr/local/bin/python3")
 
 pd <- reticulate::import("PyPDF2")
