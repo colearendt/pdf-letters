@@ -7,6 +7,8 @@ raw_page %>%
   as.list() %>%
   View()
 
+# this is JavaScript... easier just to click download 26 times
+
 #all_downloads <- fs::dir_ls("~/Downloads") %>%
 #  stringr::str_subset("\\.pdf$") %>%
 #  stringr::str_subset("-upper-") %>%
@@ -17,6 +19,8 @@ all_downloads <- fs::dir_ls("./upper")
 # https://stackoverflow.com/questions/3444645/merge-pdf-files
 
 reticulate::use_python("/usr/local/bin/python3")
+
+# reticulate::py_install("PyPDF2")
 
 pd <- reticulate::import("PyPDF2")
 
